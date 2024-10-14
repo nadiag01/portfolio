@@ -71,6 +71,8 @@ import { Component } from '@angular/core';
         </ul>
       </section>
     </div>
+
+    <p>Dowload Resume</p>
   `,
   styles: `
     .resume-container {
