@@ -4,71 +4,116 @@ import { Component } from '@angular/core';
   selector: 'app-home',
   standalone: true,
   imports: [],
-  template:`
+  template: `
+    <div class="home-main">
+      <h1>Portfolio</h1>
+      <p>
+        Hello, and welcome to my personal portfolio! My name is Nadia, and I am
+        currently a student at Bellevue University in the web development
+        program.
+      </p>
+      <p>
+        Outside of graduating with my bachelor's and continuing my career in this
+        field, I have a bucket list of things I hope to accomplish within
+        my lifetime.
+      </p>
 
-
-<h1>Portfolio</h1>
-          <div class="bio-1">
-    <p> Hello, My name is Nadia and I am currently a student at Bellevue University in the web development program. </p>
-    <p>Outside of graduating with my bachelors and continuing my career in this field, I also have a bucket list of things i hope to accomplish within my lifetime.</p>
+      <div class="user-img">
+        <img src="/pics/portfoliopic1.JPG" alt="Nadia" />
+      </div>
     </div>
 
-
-    <!-- ul for bucket list -->
-     <div class="goal-list">
-        <h2>Other Aspirations & Goals</h2>
-        <br>
-        <br>
-        <br>
-          <ul>
-            <li>Traveling around the world</li>
-            <li>Being apart of a film production</li>
-            <li>Starting a luxuary picnic business</li>
-            <li>Creating youtube content</li>
-          </ul>
-</div>
+    <div class="personal-info">
+      <h2>🎯 Things I Would Love To Do</h2>
+      <ul>
+        <li>✈️ Travel to other countries</li>
+        <li>🎥 Create a YouTube Channel</li>
+        <li>🎬 Be cast in a TV show/Movie</li>
+      </ul>
+    </div>
   `,
   styles: `
+    body {
+      background-color: #f0f4f8;
+      font-family: 'Arial', sans-serif;
+      color: #333;
+    }
 
-ul{
+    .home-main {
+      margin: 30px auto;
+      max-width: 800px;
+      background: linear-gradient(135deg, #ff7e5f, #feb47b);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      position: relative;
+      overflow: hidden;
+    }
 
-  margin: 0;
-  padding:0;
+    .home-main h1 {
+      margin: 20px 0;
+      font-size: 2.8em;
+      color: #fff;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    }
 
-}
+    .home-main p {
+      margin-bottom: 15px;
+      font-size: 1.2em;
+      color: #fff;
+    }
 
-li{
- vertical-align: top;
-margin-right: 20px;
-padding: 10px;
-text-align:right;
+    .home-main .user-img {
+      margin: 30px 0;
+      text-align: center;
+    }
 
-}
+    .personal-info {
+      margin: 30px;
+      padding: 20px;
+      border-radius: 8px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      position: relative;
+      z-index: 1;
+    }
 
-// ul{
-//   padding-left: 0;
-// text-align:right;
-// }
+    .personal-info h2 {
+      margin: 10px 0;
+      font-size: 2em;
+      color: #ff7e5f;
+      border-bottom: 2px solid #feb47b;
+      padding-bottom: 10px;
+    }
 
-ul,li{
-  list-style-position: inside;
-}
+    .personal-info ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
 
-h2 {
-    float:right; /* Aligns header text to the right */
-    margin: 10px 0; /* Adjusts top and bottom margin */
-    padding-top: 0; /* Ensures no padding at the top */
-    border:solid;
-}
+    .personal-info ul li {
+      margin-bottom: 15px;
+      font-size: 1.1em;
+      color: #555;
+      position: relative;
+      padding-left: 30px;
+    }
 
-.bio-1 {
-float: left;
-width:200px;
-}
+    .personal-info ul li::before {
+      content: '✔️';
+      position: absolute;
+      left: 0;
+      color: #ff7e5f;
+    }
 
-
-  `
+    img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      border-radius: 12px;
+      border: 4px solid #feb47b;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  `,
 })
-export class HomeComponent {
-
-}
+export class HomeComponent {}
